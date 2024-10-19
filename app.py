@@ -158,8 +158,12 @@ def run_r():
         with open('temp_code.R', 'w') as f:
             f.write(code)
 
-        # Specify the full path to Rscript (use raw string)
-        rscript_path = r'C:\Program Files\R\R-4.4.1\bin\Rscript.exe'
+        # Find Rscript in the system PATH
+        rscript_path = shutil.which('Rscript')
+        if rscript_path is None:
+            logging.error("Rscript not found in system PATH")  # Log if Rscript is not found
+            return jsonify({'output': "Error: Rscript not found"}), 500
+
         result = subprocess.run([rscript_path, 'temp_code.R'], capture_output=True, text=True)
 
         if result.returncode != 0:
