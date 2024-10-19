@@ -6,6 +6,7 @@ import io
 import logging
 from flask_cors import CORS
 import contextlib
+import shutil
 
 app = Flask(__name__)
 CORS(app)
