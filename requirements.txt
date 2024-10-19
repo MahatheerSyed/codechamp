@@ -1,9 +1,3 @@
 Flask==3.0.0
 Flask-CORS==4.0.1
-subprocess                      # Standard library, no need to include
-re                              # Standard library, no need to include
-os                              # Standard library, no need to include
-io                             # Standard library, no need to include
-logging                         # Standard library, no need to include
-contextlib                      # Standard library, no need to include
 gunicorn
