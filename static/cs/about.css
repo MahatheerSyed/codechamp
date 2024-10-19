@@ -1,0 +1,63 @@
+/* General Styling */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: red;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.about-section {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: red;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.intro p,
+.features ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features ul li {
+  background-color: #e3f2fd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid red;
+}
+
+footer {
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}

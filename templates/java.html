@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Compiler</title>
+    <link rel="icon" href="/static/images/logo.webp" />
+    <link rel="stylesheet" href="/static/cs/java.css" />
+    <link rel="stylesheet" href="/static/responsive/java.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>codechamp</h1>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="python">python</a></li>
+        <li><a href="java">java</a></li>
+      </ul>
+    </nav>
+    <div class="java-compiler">
+      <!-- Add this class -->
+      <div class="head">
+        <h2>Java Compiler</h2>
+        <button id="run">Run Code</button>
+      </div>
+      <div class="content">
+        <textarea id="code" placeholder="Enter Your Java Code Here">
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("codechamp is best Compiler");
+    }
+}
+        </textarea>
+        <div id="output"></div>
+      </div>
+    </div>
+
+    <script src="/static/js/java.js"></script>
+  </body>
+</html>

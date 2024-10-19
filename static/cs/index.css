@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+nav h1 {
+  text-transform: capitalize;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-family: sans-serif;
+  color: #b8001f;
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.549);
+  font-weight: 800;
+  padding: 10px;
+  transition: all 1s ease;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+nav ul li a:hover {
+  color: black;
+}
+.compiers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 120px;
+  background-color: black;
+  padding: 5px;
+}
+.compiers a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: capitalize;
+  display: flex;
+  gap: 10px;
+}
+.compiers a i {
+  transform: translateY(14%);
+}
+.compiers a:hover {
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #282a35;
+  display: flex;
+  justify-content: space-between;
+}
+.container img {
+  width: 40%;
+  height: 80%;
+  transform: translateY(5%);
+}
+.container .part {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.container h1 {
+  font-size: 65px;
+  text-transform: capitalize;
+  color: white;
+  padding: 20px 0 0 20px;
+  transform: translateY(10%) translateX(10%);
+  letter-spacing: 2px;
+}
+.container h2 {
+  font-size: 25px;
+  text-transform: capitalize;
+  color: rgba(255, 0, 0, 0.517);
+  transform: translateY(200%) translateX(15%);
+  letter-spacing: 2px;
+}
+.container .part blockquote {
+  font-style: italic;
+  text-align: center;
+  margin: 20px;
+  font-size: 1.5em;
+  transform: translateY(150%) translateX(5%);
+  color: rgba(255, 255, 255, 0.367);
+}
+/* =========python compiler====================== */
+.pythoncompiler {
+  width: 100%;
+  height: 100%;
+  background-color: #88c273;
+  display: flex;
+  flex-direction: row;
+}
+.pythoncompiler .textpart {
+  width: 50%;
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.pythoncompiler .codepart {
+  width: 50%;
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.pythoncompiler .codepart .coded {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  background-color: #e7e9eb;
+  padding: 10%;
+  border-radius: 5px;
+}
+.pythoncompiler .textpart h1 {
+  font-size: 75px;
+  text-transform: capitalize;
+  color: green;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 0.5px 20px rgba(255, 255, 255, 0.596);
+}
+.pythoncompiler .codepart h1 {
+  color: #000000;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.pythoncompiler .textpart p {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 14px;
+}
+.pythoncompiler .textpart a {
+  text-decoration: none;
+  width: 40%;
+  color: white;
+  padding: 7px;
+  background-color: #b8001f;
+  display: flex;
+  justify-content: center;
+  transform: translateX(70%);
+  text-transform: capitalize;
+}
+.pythoncompiler .textpart #two {
+  background-color: #282a35;
+}
+.pythoncompiler .textpart a:hover {
+  background-color: transparent;
+  border: 1px solid black;
+}
+.pythoncompiler .codepart .compliersection {
+  width: 100%;
+  height: 110%;
+  border-left: 3px solid green;
+  background-color: #ffffff;
+  padding: 5%;
+  color: rgba(0, 0, 0, 0.903);
+  font-size: 14px;
+}
+.pythoncompiler .codepart button {
+  width: 45%;
+  padding: 2%;
+  text-transform: capitalize;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid black;
+  transition: all 1s ease;
+}
+.pythoncompiler .codepart button:hover {
+  background-color: #88c273;
+  color: white;
+  border: none;
+}
+/* =========JavaScript compiler====================== */
+.jscompiler {
+  width: 100%;
+  height: 100%;
+  background-color: #5b9bd5; /* or any color you want */
+  display: flex;
+  flex-direction: row;
+}
+
+.jscompiler .textpart {
+  width: 50%;
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.jscompiler .codepart {
+  width: 50%;
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.jscompiler .codepart .coded {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  background-color: #e7e9eb;
+  padding: 5%;
+  border-radius: 5px;
+}
+
+.jscompiler .textpart h1 {
+  font-size: 75px;
+  text-transform: capitalize;
+  color: #003366;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 0.5px 20px rgba(255, 255, 255, 0.596);
+}
+
+.jscompiler .codepart h1 {
+  color: #000000;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.jscompiler .textpart p {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.jscompiler .textpart a {
+  text-decoration: none;
+  width: 40%;
+  color: white;
+  padding: 7px;
+  background-color: #b8001f;
+  display: flex;
+  justify-content: center;
+  transform: translateX(70%);
+  text-transform: capitalize;
+}
+
+.jscompiler .textpart #two {
+  background-color: #282a35;
+}
+
+.jscompiler .textpart a:hover {
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+.jscompiler .codepart .compliersection {
+  width: 100%;
+  height: 110%;
+  border-left: 3px solid #003366;
+  background-color: #ffffff;
+  padding: 5%;
+  color: rgba(0, 0, 0, 0.903);
+  font-size: 14px;
+}
+
+.jscompiler .codepart button {
+  width: 45%;
+  padding: 2%;
+  text-transform: capitalize;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid black;
+  transition: all 1s ease;
+}
+
+.jscompiler .codepart button:hover {
+  background-color: #5b9bd5;
+  color: white;
+  border: none;
+}
+
+/* =========HTML compiler====================== */
+.htmlcompiler {
+  width: 100%;
+  height: 100%;
+  background-color: #f5b041;
+  display: flex;
+  flex-direction: row;
+}
+
+.htmlcompiler .textpart {
+  width: 50%;
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.htmlcompiler .codepart {
+  width: 50%;
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.htmlcompiler .codepart .coded {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0px;
+  background-color: #e7e9eb;
+  padding: 2%;
+  border-radius: 5px;
+  scale: 0.9;
+}
+
+.htmlcompiler .textpart h1 {
+  font-size: 75px;
+  text-transform: capitalize;
+  color: orange;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 0.5px 20px rgba(255, 255, 255, 0.596);
+}
+
+.htmlcompiler .codepart h1 {
+  color: #000000;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-left: 20px;
+  margin-bottom: -10px;
+}
+
+.htmlcompiler .textpart p {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.htmlcompiler .textpart a {
+  text-decoration: none;
+  width: 40%;
+  color: white;
+  padding: 7px;
+  background-color: #b8001f;
+  display: flex;
+  justify-content: center;
+  transform: translateX(70%);
+  text-transform: capitalize;
+}
+
+.htmlcompiler .textpart #two {
+  background-color: #282a35;
+}
+
+.htmlcompiler .textpart a:hover {
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+.htmlcompiler .codepart .compliersection {
+  width: 100%;
+  height: 110%;
+  border-left: 3px solid orange;
+  background-color: #ffffff;
+  padding: 5%;
+  color: rgba(0, 0, 0, 0.903);
+  font-size: 14px;
+  scale: 0.9;
+}
+
+.htmlcompiler .codepart button {
+  width: 45%;
+  padding: 2%;
+  text-transform: capitalize;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid black;
+  transition: all 1s ease;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.htmlcompiler .codepart button:hover {
+  background-color: #f5b041;
+  color: white;
+  border: none;
+}
+
+/* =========R compiler====================== */
+.rcompiler {
+  width: 100%;
+  height: 100%;
+  background-color: #5b9bd5; /* or any color you want */
+  display: flex;
+  flex-direction: row;
+}
+
+.rcompiler .textpart {
+  width: 50%;
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.rcompiler .codepart {
+  width: 50%;
+  height: 100%;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.rcompiler .codepart .coded {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  background-color: #e7e9eb;
+  padding: 5%;
+  border-radius: 5px;
+}
+
+.rcompiler .textpart h1 {
+  font-size: 75px;
+  text-transform: capitalize;
+  color: #003366;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 0.5px 20px rgba(255, 255, 255, 0.596);
+}
+
+.rcompiler .codepart h1 {
+  color: #000000;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.rcompiler .textpart p {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.rcompiler .textpart a {
+  text-decoration: none;
+  width: 40%;
+  color: white;
+  padding: 7px;
+  background-color: #b8001f;
+  display: flex;
+  justify-content: center;
+  transform: translateX(70%);
+  text-transform: capitalize;
+}
+
+.rcompiler .textpart #two {
+  background-color: #282a35;
+}
+
+.rcompiler .textpart a:hover {
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+.rcompiler .codepart .compliersection {
+  width: 100%;
+  height: 110%;
+  border-left: 3px solid #003366;
+  background-color: #ffffff;
+  padding: 5%;
+  color: rgba(0, 0, 0, 0.903);
+  font-size: 14px;
+}
+
+.rcompiler .codepart button {
+  width: 45%;
+  padding: 2%;
+  text-transform: capitalize;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid black;
+  transition: all 1s ease;
+}
+
+.rcompiler .codepart button:hover {
+  background-color: #5b9bd5;
+  color: white;
+  border: none;
+}
+
+/* =========================footer========================= */
+.footer {
+  width: 100%;
+  height: 100%;
+  background-color: #2c1a27;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5%;
+}
+.footer .foot {
+  width: 50%;
+  height: 100%;
+  padding: 5% 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: start;
+}
+.footer #feedback_form {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: start;
+  transform: translateX(-35%);
+  padding: 2%;
+  color: white;
+}
+.footer #feedback_form input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  text-transform: capitalize;
+}
+.footer #feedback_form button {
+  width: 200px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+  color: #000000;
+  font-weight: 800;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+}
+.footer #feedback_form button:hover {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: white;
+}
+.footer #feedback_form input::placeholder {
+  color: white;
+}
+.footer .foot h1 {
+  font-size: 50px;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-style: oblique;
+}
+.footer .foot .icons_fed {
+  display: flex;
+  gap: 30px;
+  transform: translateX(7%);
+}
+.footer .foot .icons_fed a i {
+  color: white;
+  font-size: 25px;
+}

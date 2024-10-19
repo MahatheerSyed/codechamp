@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Compiler</title>
+    <link rel="icon" href="/static/images/logo.webp" />
+    <link rel="stylesheet" href="/static/cs/html.css" />
+    <link rel="stylesheet" href="/static/responsive/html.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>codechamp</h1>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="python">python</a></li>
+        <li><a href="java">java</a></li>
+        <li><a href="html">html</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="head">
+        <h2>HTML Compiler</h2>
+        <button id="run">Run Code</button>
+      </div>
+      <div class="content">
+        <textarea id="code" placeholder="Enter Your HTML Code Here">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample HTML</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a sample HTML output.</p>
+</body>
+</html>
+        </textarea>
+        <div id="output"></div>
+      </div>
+    </div>
+
+    <script src="/static/js/html.js"></script>
+  </body>
+</html>

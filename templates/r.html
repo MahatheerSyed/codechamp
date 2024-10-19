@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R Compiler</title>
+    <link rel="icon" href="/static/images/logo.webp" />
+    <link rel="stylesheet" href="/static/cs/r.css" />
+    <link rel="stylesheet" href="/static/responsive/r.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>codechamp</h1>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">contact</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="head">
+        <h2>R Compiler</h2>
+        <button id="run">Run Code</button>
+      </div>
+      <div class="content">
+        <textarea id="code" placeholder="# Enter Your R Code Here">
+print("codechamp is best Compiler")
+            </textarea
+        >
+        <div id="output"></div>
+      </div>
+    </div>
+
+    <script>
+      // Load code from local storage when the page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        const codeTextarea = document.getElementById("code");
+        const savedCode = localStorage.getItem("rCode");
+        if (savedCode) {
+          codeTextarea.value = savedCode; // Set the textarea content to the saved code
+          localStorage.removeItem("rCode"); // Clear the stored code
+        }
+      });
+
+      // Function to run the R code via the server
+      function runRCode() {
+        const code = document.getElementById("code").value;
+        const outputElement = document.getElementById("output");
+        outputElement.innerText = "Executing code..."; // Placeholder for execution logic
+
+        fetch("/run-r", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ code }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              return response.json().then((err) => {
+                throw new Error(err.output);
+              });
+            }
+            return response.json();
+          })
+          .then((data) => {
+            outputElement.innerText = data.output; // Update with actual output
+          })
+          .catch((error) => {
+            outputElement.innerText = "Error: " + error.message; // Display error message
+          });
+      }
+
+      // Bind the run function to the button click
+      document.getElementById("run").addEventListener("click", runRCode);
+    </script>
+  </body>
+</html>

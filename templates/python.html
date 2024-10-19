@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Compiler</title>
+    <link rel="icon" href="/static/images/logo.webp" />
+    <link rel="stylesheet" href="/static/cs/python.css" />
+    <link rel="stylesheet" href="/static/responsive/python.css" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"
+    ></script>
+  </head>
+  <body onload="brython()">
+    <nav>
+      <h1>codechamp</h1>
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">contact</a></li>
+      </ul>
+    </nav>
+    <div class="conatiner">
+      <div class="head">
+        <h2>Python Compiler</h2>
+        <button id="run">Run Code</button>
+      </div>
+      <div class="content">
+        <textarea id="code" placeholder="#Enter Your code Here">
+print("codechamp is best Compiler")</textarea
+        >
+        <div id="output"></div>
+      </div>
+    </div>
+    <script type="text/python">
+      from browser import document, window, html
+
+      # Override the print function to display output on the webpage
+      def custom_print(*args):
+          output_element = document["output"]
+          output_element <= html.P(" ".join([str(arg) for arg in args]))
+
+      # Redirect the built-in print function to the custom one
+      __builtins__.print = custom_print
+
+      def run_code(event):
+          code = document["code"].value
+          output_element = document["output"]
+          output_element.clear()  # Clear previous output
+          try:
+              exec(code)  # Execute the Python code
+          except Exception as e:
+              output_element <= html.P(f"Error: {str(e)}", style={"color": "red"})
+
+      document["run"].bind("click", run_code)
+    </script>
+
+    <script src="/static/js/python.js"></script>
+  </body>
+</html>

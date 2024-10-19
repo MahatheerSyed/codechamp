@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeChamp</title>
+    <link rel="icon" href="/static/images/logo.webp" />
+    <link rel="stylesheet" href="/static/cs/index.css" />
+    <link rel="stylesheet" href="/static/responsive/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <h1>codechamp</h1>
+      <ul>
+        <li><a href="about">about</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="compiers">
+      <a href="python"><i class="fa-brands fa-python"></i> Python</a>
+      <a href="java"><i class="fab fa-java"></i> Java</a>
+      <a href="html"><i class="fab fa-html5"></i> HTML</a>
+      <a href="html"><i class="fab fa-css3-alt"></i> CSS</a>
+      <a href="javascript"><i class="fab fa-js-square"></i> JavaScript</a>
+      <!-- <a href="C"><i class="fas fa-c"></i> </a>
+      <a href="cpp"><i class="fas fa-c"></i><sup>++</sup></a>
+      <a href="c#"><i class="fas fa-hashtag"></i> C#</a> -->
+      <a href="r"><i class="fa-brands fa-r-project"></i> R</a>
+    </div>
+    <div class="container">
+      <div class="part">
+        <h1>codechamp</h1>
+        <h2>
+          we have <span class="typing" style="color: white"></span> compilers
+        </h2>
+        <blockquote>
+          "Code is like humor. When you have to explain it, it’s bad."
+          <br />— Cory House
+        </blockquote>
+      </div>
+      <img src="/static/images/astronant.png" alt="astronant image" />
+    </div>
+    <!-- =====================python=============================== -->
+    <div class="pythoncompiler">
+      <div class="textpart">
+        <h1>python</h1>
+        <p>A popular programming language</p>
+        <a href="python">compiler</a>
+        <a href="https://www.w3schools.com/python/default.asp" id="two"
+          >learn more</a
+        >
+      </div>
+      <div class="codepart">
+        <div class="coded">
+          <h1>example code</h1>
+
+          <div class="compliersection">
+            <pre><code>
+# Python program to sum numbers 
+def sum_numbers(numbers): 
+      return sum(numbers) 
+numbers = [1, 2, 3, 4, 5] 
+total = sum_numbers(numbers) 
+print(f'The sum is: {total}')
+            </code>
+          </pre>
+          </div>
+
+          <button onclick="tryYourself()">try yourself</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================JavaScript=============================== -->
+    <div class="jscompiler">
+      <div class="textpart">
+        <h1>JavaScript</h1>
+        <p>A versatile programming language for web development</p>
+        <a href="javascript">compiler</a>
+        <a href="https://www.w3schools.com/js/default.asp" id="two"
+          >learn more</a
+        >
+      </div>
+      <div class="codepart">
+        <div class="coded">
+          <h1>example code</h1>
+          <div class="compliersection">
+            <pre><code>
+// Sample JavaScript code
+const numbers = [1, 2, 3, 4, 5];
+const total = numbers.reduce(
+  (acc, num) => acc + num, 0);
+
+console.log("The sum is:", total);
+        </code></pre>
+          </div>
+          <button onclick="tryYourselfjavscript()">try yourself</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===============html============================== -->
+    <div class="htmlcompiler">
+      <div class="textpart">
+        <h1>HTML</h1>
+        <p>A markup language for creating web pages</p>
+        <a href="html">compiler</a>
+        <a href="https://www.w3schools.com/html/default.asp" id="two"
+          >learn more</a
+        >
+      </div>
+      <div class="codepart">
+        <div class="coded">
+          <h1>example code</h1>
+          <div class="compliersection">
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Sum Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;h1&gt;The Sum of Numbers&lt;/h1&gt;
+  &lt;script&gt;
+const numbers = [1, 2, 3, 4, 5];
+const total = numbers.
+ reduce((acc, num) =&gt; acc + num, 0);
+document.write(`The sum is: ${total}`);
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+          </div>
+
+          <button onclick="tryYourselfhtml()">try yourself</button>
+        </div>
+      </div>
+    </div>
+    <!-- =====================R=============================== -->
+    <div class="rcompiler">
+      <div class="textpart">
+        <h1>R</h1>
+        <p>A popular programming language for statistical computing</p>
+        <a href="r">compiler</a>
+        <a href="https://www.w3schools.com/r/default.asp" id="two"
+          >learn more</a
+        >
+      </div>
+      <div class="codepart">
+        <div class="coded">
+          <h1>example code</h1>
+          <div class="compliersection">
+            <pre><code>
+# Sample R code
+# Create a vector of numbers
+numbers <- c(1, 2, 3, 4, 5)  
+# Calculate the sum
+total <- sum(numbers)        
+# Print the sum
+cat("The sum is:", total, "\n")            
+        </code></pre>
+          </div>
+          <button onclick="tryYourselfr()">try yourself</button>
+        </div>
+      </div>
+    </div>
+    <!-- ======================footer========================================== -->
+    <div class="footer" id="contact">
+      <div class="foot">
+        <h1>CodeChamp</h1>
+        <div class="icons_fed">
+          <a
+            href="https://www.linkedin.com/in/sd-mahatheer-ba37992b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/MahatheerSyed" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://m.facebook.com/" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://x.com/MahatheerS18779?s=09" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+      <div class="feed">
+        <form action="" id="feedback_form" name="submit-to-google-sheet">
+          <h1>Feedback</h1>
+          <input
+            type="text"
+            name="Name"
+            placeholder="Enter your name"
+            required
+          />
+          <input
+            type="email"
+            name="Email"
+            placeholder="Enter your E-Mail"
+            required
+          />
+          <input
+            type="text"
+            name="Message"
+            placeholder="Enter your Feedback"
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <!-- GSAP CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="/static/js/index.js"></script>
+  </body>
+</html>

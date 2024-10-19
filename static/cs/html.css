@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+nav h1 {
+  text-transform: capitalize;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-family: sans-serif;
+  color: #b8001f;
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.549);
+  font-weight: 800;
+  padding: 10px;
+  transition: all 1s ease;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+nav ul li a:hover {
+  color: black;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .head {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: start;
+  gap: 300px;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.459);
+}
+.container .head button {
+  width: 10%;
+  padding: 5px;
+  background-color: #059862;
+  border: none;
+  color: white;
+  font-weight: 800;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.container .content textarea {
+  width: 50%;
+  height: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 1%;
+  background-color: #1f2023;
+  color: white;
+  font-size: 14px;
+}
+.container .content textarea::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+}
+.container .content #output {
+  width: 50%;
+  height: 100%;
+  border: none;
+  padding: 1%;
+  background-color: #1c2130;
+  color: white;
+  font-size: 14px;
+  border-left: 5px solid rgba(255, 0, 0, 0.533);
+}
