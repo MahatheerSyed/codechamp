@@ -6,7 +6,6 @@ import io
 import logging
 from flask_cors import CORS
 import contextlib
-import shutil
 
 app = Flask(__name__)
 CORS(app)
@@ -38,8 +37,16 @@ def execute_code(code, extension, compiler_command):
     if compile_process.returncode != 0:
         return jsonify({'output': compile_process.stderr}), 500
 
-    run_process = run_subprocess(['./temp_code']) if extension in ['c', 'cpp'] else run_subprocess(['java', filename[:-5]]) if extension == 'java' else run_subprocess(['mono', 'temp_code.exe']) if extension == 'cs' else run_subprocess(['Rscript', filename])
-    
+    # Execute the compiled code based on the extension
+    if extension in ['c', 'cpp']:
+        run_process = run_subprocess(['./temp_code'])
+    elif extension == 'java':
+        run_process = run_subprocess(['java', filename[:-5]])
+    elif extension == 'cs':
+        run_process = run_subprocess(['mono', 'temp_code.exe'])
+    elif extension == 'r':
+        run_process = run_subprocess(['Rscript', filename])
+
     return run_process
 
 @app.route('/')
@@ -61,7 +68,7 @@ def html_compiler_html():
 @app.route('/c')
 def c_compiler():
     return render_template('C.html')
-    
+
 @app.route('/about')
 def about_compiler():
     return render_template('about.html')
@@ -75,7 +82,7 @@ def javascript_compiler():
     return render_template('javascript.html')
 
 @app.route('/r')
-def R_compiler():
+def r_compiler():
     return render_template('r.html')
 
 @app.route('/c#')
@@ -148,7 +155,6 @@ def run_javascript():
     except Exception as e:
         return jsonify({'output': str(e)}), 400
 
-
 @app.route('/run-r', methods=['POST'])
 def run_r():
     data = request.json
@@ -159,13 +165,8 @@ def run_r():
         with open('temp_code.R', 'w') as f:
             f.write(code)
 
-        # Find Rscript in the system PATH
-        rscript_path = shutil.which('Rscript')
-        if rscript_path is None:
-            logging.error("Rscript not found in system PATH")  # Log if Rscript is not found
-            return jsonify({'output': "Error: Rscript not found"}), 500
-
-        result = subprocess.run([rscript_path, 'temp_code.R'], capture_output=True, text=True)
+        # Run the R script
+        result = run_subprocess(['Rscript', 'temp_code.R'])
 
         if result.returncode != 0:
             logging.error("R script error: %s", result.stderr)  # Log the error
